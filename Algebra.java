@@ -184,13 +184,12 @@ public class Algebra {
 		{
 			g=1;
 		}
+		
 		int tempG=-1;
 		
-
-		//(minus(times(g,g),num)>epsilon)
 		while (true) 
 		{
-			if(minus(0,epsilon)<= minus(x,times(g,g)) && minus(x,times(g,g))<= epsilon )
+			if(minus(times(g, g), x) <= epsilon && minus(times(g, g), x) >= minus(0, epsilon) )
 				{
 					break;
 				} 
@@ -205,7 +204,10 @@ public class Algebra {
 				break;
 			}
 		}
-
+		if (times(g,g)==num)
+		{
+			return g;
+		}
 		while (times(g,g)> x)
 		{
 			g--;
