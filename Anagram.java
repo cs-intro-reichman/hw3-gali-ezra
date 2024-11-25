@@ -33,6 +33,10 @@ public class Anagram {
 		String newStr1=preProcess(str1);
 		String newStr2=preProcess(str2);
 		
+		if(newStr2.length()!=newStr1.length())
+		{
+			return false;
+		}
 		for (int i=0;i<newStr1.length();i++)
 		{
 			for (int j=0; j<newStr2.length();j++)
@@ -87,7 +91,7 @@ public class Anagram {
 		int x=(int)(Math.random()* i);
 		randomStr += str1.charAt(x);
 
-		for (int j=0;j<str1.length();i++)
+		for (int j=0;j<str1.length();j++)
 		{
 			if (str1.charAt(j)!=str1.charAt(x))
 			{
