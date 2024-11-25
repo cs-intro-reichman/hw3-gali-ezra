@@ -33,10 +33,10 @@ public class Anagram {
 		String newStr1=preProcess(str1);
 		String newStr2=preProcess(str2);
 		
-		if(newStr2.length()!=newStr1.length())
-		{
-			return false;
-		}
+		//if(newStr2.length()!=newStr1.length())
+		//{
+		//	return false;
+		//}
 		for (int i=0;i<newStr1.length();i++)
 		{
 			for (int j=0; j<newStr2.length();j++)
