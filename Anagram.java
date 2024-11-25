@@ -44,6 +44,7 @@ public class Anagram {
 				if (newStr1.charAt(i)==newStr2.charAt(j))
 				{
 					found=true;
+					newStr2= newStr2.substring(0, j) + '%' + newStr2.substring(j+1);
 					break;
 				}
 			}
