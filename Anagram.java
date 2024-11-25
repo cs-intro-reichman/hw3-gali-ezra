@@ -90,19 +90,12 @@ public class Anagram {
 	public static String randomAnagram(String str) {
 	String str1=str;
 	String randomStr="";
-	
-	for (int i=str1.length()-1;i>=0;i--)
-	{
-		int x=(int)(Math.random()* i);
-		randomStr += str1.charAt(x);
 
-		for (int j=0;j<str1.length();j++)
-		{
-			if (str1.charAt(j)!=str1.charAt(x))
-			{
-				str1+=str1.charAt(j);
-			}
-		}
+	while(str1.length()>0)
+	{
+		int x=(int)(Math.random()* str1.length());
+		randomStr += str1.charAt(x);
+		str1=str1.substring(0,x)+str1.substring(x+1);
 
 	}
 		return randomStr;
