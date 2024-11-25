@@ -171,47 +171,16 @@ public class Algebra {
 
 	// Returns the integer part of sqrt(x) 
 		public static int sqrt(int x) {
-
+			int result=0;
 			if(x==0 || x==1)
 		{
 			return x;
 		}
+		for(int i=0;times(i,i)<=x;i++)
+		{
+			result=i;
+		}
 
-		int num=x;
-		int epsilon=1;
-		int g= div(num,2) ;
-		if (g==0)
-		{
-			g=1;
-		}
-		
-		int tempG=-1;
-		
-		while (true) 
-		{
-			if(minus(times(g, g), x) <= epsilon && minus(times(g, g), x) >= minus(0, epsilon) )
-				{
-					break;
-				} 
-				if(g==0)
-				{
-					break;
-				}
-			tempG=g;
-			g= minus(g,div(minus(times(g,g),x),times(2,g)));
-			if (tempG==g)
-			{
-				break;
-			}
-		}
-		if (times(g,g)==num)
-		{
-			return g;
-		}
-		while (times(g,g)> x)
-		{
-			g--;
-		}
-		return g;
+	return result;
 	}	  	  
 }
